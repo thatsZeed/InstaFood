@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="InstaFood.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:InstaFood"
+    xmlns:views="clr-namespace:InstaFood.Views"
+    xmlns:models="clr-namespace:InstaFood.Models">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:LoginPage}"
+        FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"
+        Route="MainPage" />
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent 
+            Title="Home"
+            Icon="{x:Static models:Icons.Main}"
+            ContentTemplate="{DataTemplate local:MainPage}">
+        </ShellContent>
+        
+        <ShellContent
+            Title="Suche"
+            Icon="{x:Static models:Icons.Search}"
+            ContentTemplate="{DataTemplate views:SearchPage}">
+        </ShellContent>
+
+        <ShellContent 
+            Title="Kochbuch"
+            Icon="{x:Static models:Icons.CookBook}"
+            ContentTemplate="{DataTemplate views:CookbookPage}">
+        </ShellContent>
+
+        <!--<ShellContent 
+            Title="Account"
+            Icon="{x:Static models:Icons.Profile}"
+            ContentTemplate="{DataTemplate views:AccountPage}">
+        </ShellContent>-->
+    </FlyoutItem>
+
+</Shell>

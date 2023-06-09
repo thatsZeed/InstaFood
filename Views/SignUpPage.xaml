@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InstaFood.Views.SignUpPage"
+             Title="SignUpPage">
+
+    <Grid>
+        <Grid RowSpacing="5" Grid.Row="1" Margin="20,20,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+
+            <StackLayout Grid.Row="1"
+                             Orientation="Vertical"
+                             HorizontalOptions="CenterAndExpand">
+                <Frame BackgroundColor="Transparent"
+                           BorderColor="BlueViolet"
+                           Padding="0"
+                           HorizontalOptions="FillAndExpand"
+                           CornerRadius="30">
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Placeholder="Username"
+                                   TextColor="Black"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="FillAndExpand"
+                                   BackgroundColor="White"
+                                   Text="{Binding Username}"></Entry>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent"
+                           BorderColor="BlueViolet"
+                           Padding="0"
+                           HorizontalOptions="FillAndExpand"
+                           CornerRadius="30">
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Placeholder="E-Mail"
+                                   TextColor="Black"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="FillAndExpand"
+                                   BackgroundColor="White"
+                                   Text="{Binding Email}"></Entry>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent"
+                           BorderColor="BlueViolet"
+                           Padding="0"
+                           HorizontalOptions="FillAndExpand"
+                           CornerRadius="30">
+                    <StackLayout Orientation="Horizontal">
+                        <DatePicker TextColor="Black"
+                                    FontAttributes="Bold"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="FillAndExpand"
+                                    BackgroundColor="White"
+                                    Date="{Binding Birthday}">
+                        </DatePicker>
+                    </StackLayout>
+                </Frame>
+
+
+                <Frame BackgroundColor="Transparent"
+                           BorderColor="BlueViolet"
+                           Padding="0"
+                           HorizontalOptions="FillAndExpand"
+                           CornerRadius="30">
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Placeholder="Password"
+                                   TextColor="Black"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="FillAndExpand"
+                                   BackgroundColor="White"
+                                   Text="{Binding Password}"></Entry>
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Forgot Password?" TextColor="BlueViolet" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                <HorizontalStackLayout>
+                    <Label Text="Don't have account?" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center"></Label>
+                    <Label Text="Sign Up" FontSize="16" FontAttributes="Bold"></Label>
+                </HorizontalStackLayout>
+                
+                <Button 
+                    Style="{StaticResource LoginButtonStyle}"
+                    BackgroundColor="BlueViolet"
+                    Text="Registrieren"
+                    TextColor="White"
+                    FontSize="Small"
+                    HeightRequest="40"
+                    WidthRequest="150"
+                    Margin="0,15,0,0"
+                    HorizontalOptions="EndAndExpand"
+                    Command="{Binding SignUp}">
+                </Button>
+
+            </StackLayout>
+        </Grid>
+    </Grid>
+
+</ContentPage>
